@@ -19,10 +19,13 @@ class Coche(Vehiculo):
         return super().__str__() + ", {} km/h, {} cc".format(self.velocidad, self.cilindrada)
 
 class Bicicleta(Vehiculo):
+    tipo = ""
     def __init__(self, color, ruedas, tipo):
         super().__init__(color, ruedas)
         self.tipo = tipo
 
 class Camion(Vehiculo):
-    def __init__(self, color, ruedas, carga):
-        super().__init__(color, ruedas)
+    carga = 0
+    def __init__(self, color, ruedas, velocidad, cilindrada, carga):
+        super().__init__(color, ruedas, velocidad, cilindrada)
+        self.carga = carga

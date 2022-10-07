@@ -24,8 +24,19 @@ class Bicicleta(Vehiculo):
         super().__init__(color, ruedas)
         self.tipo = tipo
 
-class Camion(Vehiculo):
+class Camion(Coche):
     carga = 0
     def __init__(self, color, ruedas, velocidad, cilindrada, carga):
         super().__init__(color, ruedas, velocidad, cilindrada)
         self.carga = carga
+
+class Motocicleta(Bicicleta):
+    velocidad = 0
+    cilindrada = 0
+    def __init__(self, color, ruedas, tipo, velocidad, cilindrada):
+        super().__init__(color, ruedas, tipo)
+        self.velocidad = velocidad
+        self.cilindrada = cilindrada
+
+ca = Camion("Blanco", 8, 90, 400, 400)
+co = Coche("Negro", )

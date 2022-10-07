@@ -1,3 +1,4 @@
+from msilib.schema import BindImage
 from socket import TIPC_TOP_SRV
 
 
@@ -38,5 +39,8 @@ class Motocicleta(Bicicleta):
         self.velocidad = velocidad
         self.cilindrada = cilindrada
 
+mo = Motocicleta("Roja", 2, "Triciclo", 120, 250)
 ca = Camion("Blanco", 8, 90, 400, 400)
-co = Coche("Negro", )
+co = Coche("Negro", 4, 120, 600)
+bi= Bicicleta("Rosa", 2, "Triciclo")
+listaVehiculos = [mo.__dict__]

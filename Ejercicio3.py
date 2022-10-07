@@ -15,4 +15,8 @@ class Producto:
 Producto1 = (336, "Caja", 5, "Organización")
 print(Producto1)
 
-Producto2 = (287, "Cuadro", 22, )
+Producto2 = (287, "Cuadro", 22, "Decoración")
+print(Producto2)
+
+Producto3 = (336, "Caja", 3, "Organización")
+print(Producto3)

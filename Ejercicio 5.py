@@ -1,3 +1,6 @@
+from socket import TIPC_TOP_SRV
+
+
 class Vehiculo():
     def __init__(self, color, ruedas):
         self.color = color
@@ -15,5 +18,11 @@ class Coche(Vehiculo):
     def __str__(self):
         return super().__str__() + ", {} km/h, {} cc".format(self.velocidad, self.cilindrada)
 
-c = Coche("azul", 4, 150, 1200)
-print(c)
+class Bicicleta(Vehiculo):
+    def __init__(self, color, ruedas, tipo):
+        super().__init__(color, ruedas)
+        self.tipo = tipo
+
+class Camion(Vehiculo):
+    def __init__(self, color, ruedas, carga):
+        super().__init__(color, ruedas)

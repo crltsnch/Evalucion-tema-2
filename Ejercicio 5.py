@@ -1,6 +1,3 @@
-from msilib.schema import BindImage
-from socket import TIPC_TOP_SRV
-
 
 class Vehiculo():
     def __init__(self, color, ruedas):
@@ -43,4 +40,14 @@ mo = Motocicleta("Roja", 2, "Triciclo", 120, 250)
 ca = Camion("Blanco", 8, 90, 400, 400)
 co = Coche("Negro", 4, 120, 600)
 bi= Bicicleta("Rosa", 2, "Triciclo")
-listaVehiculos = [mo.__dict__]
+listaVehiculos = [mo.__dict__, ca.__dict__, co.__dict__, bi.__dict__]
+print(listaVehiculos)
+
+def catalogar(listaVehiculos, nRuedas = None):
+    cuenta = 0
+    for vehiculo in listaVehiculos:
+        if nRuedas == vehiculo.ruedas:
+            print(vehiculo)
+            cuenta +=1
+    if nRuedas:
+        print("Se han encontrado {cuenta} vehiculos con {nRuedas ruedas}")
